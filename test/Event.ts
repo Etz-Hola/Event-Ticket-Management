@@ -146,6 +146,8 @@ import {
         })
       });
 
+      
+
       describe("Verify Attendance", () => {
         it("should verify attendance", async () => {
             const { _event, owner, address1 } = await loadFixture(deployEventContractFixture);
@@ -178,6 +180,10 @@ import {
             await _event.verifyAttendance(1, 1);
             expect(await (await _event.events(1))._verifiedGuestCount).to.equal(1);
         });
+
+
+
+        
 
         it('should emit Verified Ticket event', async () => {
             const { _event, owner, address1 } = await loadFixture(deployEventContractFixture);
