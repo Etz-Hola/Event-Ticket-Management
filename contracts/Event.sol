@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.8.28;
 
-import "./Erc721.sol";
+import "./ERC721.sol";
 
 contract EventContract {
 
@@ -12,7 +12,9 @@ contract EventContract {
     }
 
     event EventCreated (uint256 _id, address _organizer);
+
     event RegisterEvent(uint256 _id, address _address);
+    
     event VerifiedTicket(uint256 _event_id, uint256 _ticket_id);
 
     struct EventDetails {
